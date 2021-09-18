@@ -9,16 +9,22 @@ var specialC = ["'~','!','@','#''$''%''^''&''*''('')''_''+'"]
 //define generate password
 function generatePassword(){
   console.log("Button has been clicked");
-var passwordLength = window.prompt("How many characters for your password?")
-if (passwordLength<8 || passwordLength>128){
+
+var charLength = window.prompt("How many characters for your password?")
+
+if (charLength<8 || charLength>128){
   window.alert("Plus select length between 8 & 128 characters");
-  //return;
+  return(window.prompt("How many characters for your password?"));
 } else{
-  if (window.confirm("Would you like uppercase letters?"));
+  window.confirm("Would you like uppercase letters?");
+} 
+console.log(charLength);
+
+  
  
-  if (window.confirm("Would you like special characters?"));
-}
-if (window.confirm("Would you like lowercase letters?"));
+ // if (window.confirm("Would you like special characters?"));
+//}
+//if (window.confirm("Would you like lowercase letters?"));
 
   return( "generated password");
 
