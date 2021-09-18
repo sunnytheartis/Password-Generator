@@ -1,10 +1,7 @@
 // Assignment Code
 var generateBtn = document.querySelector("#generate");
 
-//variables to choose from
-//var uppercase = ["'A', 'B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z'"]
-//var lowercase = ["'a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z'"]
-//var specialC = ['~','!','@','#','$','%','^','&','*','(',')','_','+']
+
 
 //define generate password
 function generatePassword(){
@@ -25,12 +22,13 @@ if (charLength < 8 || charLength > 128){
 }
 
 console.log(charLength);
-
+// Asking questions for password criteria
 var upperC = window.confirm('Would you like capital letters?');
 var lowerC = window.confirm("Would you like lower case letters?");
 var specC = window.confirm("Would you like special characters?");
 var numbr = window.confirm("Would like any numbers?");
 
+//Confirming answers to questions
 if (!specC && !lowerC && !numbr && !upperC){ 
   window.alert("Select at least one option");
  return password;
@@ -54,7 +52,7 @@ if (upperC){
   allSelect = [...numbers,...allSelect];
   
 }
-
+//Randomizing array to access elements for password
  for (var i =0; i < charLength; i++){
    var rando = Math.floor(Math.random()*allSelect.length);
    password += allSelect[rando];
